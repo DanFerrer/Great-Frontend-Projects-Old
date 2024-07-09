@@ -1,0 +1,212 @@
+:root {
+  --card-white: #ffffff;
+  --card-indigo-700: #4338ca;
+  --card-neutral-900: #171717;
+  --card-neutral-600: #525252;
+  --card-gray-light: #f9fafb;
+  --card-gray-light-alt: #d2d6db;
+  
+  --button-disabled-background: #f5f5f5;
+  --button-disabled-text: #a3a3a3;
+  --button-hover-focus-color: #3730a3;
+
+  --social-button-focus-hover: #fafafa;
+
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-xl: 1.25; /* 20px */
+}
+
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100vh;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: var(--Linear-Page, linear-gradient(148deg, #F9FAFB 8.89%, #D2D6DB 100.48%));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 812px;
+  padding: 200px 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    min-height: 1024px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    min-height: 768px;
+  }
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 340px;
+  padding: 24px 16px;
+  background: var(--card-white);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.profile-card-details {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-card-thumbnail {
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+}
+
+.profile-card-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+}
+
+.profile-card-name {
+  margin-block: 0;
+  margin-inline: 0;
+  color: var(--card-neutral-900);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
+.profile-card-role {
+  margin-block: 0;
+  margin-inline: 0;
+  color: var(--card-neutral-600);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.profile-card-bio {
+  margin-block: 0;
+  margin-inline: 0;
+  color: var(--card-neutral-600);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.profile-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 24px;
+}
+
+.profile-card-contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 44px;
+  gap: 6px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: var(--text-base);
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 0 2px;
+  color: var(--card-white);
+  background-color: var(--card-indigo-700);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card-contact-button:hover {
+  background-color: var(--button-hover-focus-color);
+}
+
+.profile-card-contact-button:focus {
+  background-color: var(--button-hover-focus-color);
+  box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+}
+ 
+.profile-card-contact-button:disabled {
+  background-color: var(--button-disabled-background);
+  color: var(--button-disabled-text);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.profile-card-socials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.profile-card-social-button {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.profile-card-social-button:hover {
+  background-color: var(--social-button-focus-hover);
+}
+
+.profile-card-social-button:focus {
+  background-color: var(--social-button-focus-hover);
+  box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+}
+
+.profile-card-social-button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+ 
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}
