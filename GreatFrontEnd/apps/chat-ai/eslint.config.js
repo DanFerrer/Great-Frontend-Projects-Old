@@ -29,5 +29,11 @@ export default [
 	},
 	{
 		ignores: ['build/', '.svelte-kit/', 'dist/']
+	},
+	{
+		rules: {
+			'semi': [2, 'always'],
+			
+		}
 	}
 ];
